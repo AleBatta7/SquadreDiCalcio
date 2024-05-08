@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>99</x>
+      <y>189</y>
+      <w>261</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>Calciatore
+--
+- codice: long
+- nextCodice: static long
+- nome: String
+- cognome: String
+- numeroMaglia: int
+- squadra: String
+- dataNacscita: LocalDate
+--
++ Calciatore(nome:String, cognome: String, dataNacita: LocalDate, numeroMaglia:int, squadra:String)
++ Calciatore(calciatore:Calciatore)
++ getCodice()
++ getNome():String
++ getCognome()
++ getDataNascita()
++ getNumeroMaglia()
++ getSquadra()
++ setNome(nome:String)
++ setCognome(cognome:String)
++ setNumeroMaglia(numeroMaglia:int)
++ setSquadra(squadra:String)
++ toString:String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>189</y>
+      <w>279</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>Squadra
+--
+- ArrayList&lt;Calciatore&gt;
+- codice: long
+- nextCodice: static long
+- nome: String
+- citta: String
+- categoria: String
+--
++ Squadra(nome:String, citta:String, categoria:String)
++ Squadra(squadra:Squadra)
++ getGiocatori(): ArrayList&lt;Calciatore&gt;
++ getNome(): String
++ getCitta(): String
++ getCategoria(): String
++ getCodice(): long
++ setCalciatore(calciatore:Calciatore)
++ setNome(nome:String)
++ setCitta(citta:String)
++ setCategoria(categoria: String)
++ visualizzaCalciatori(): ArrayList&lt;Calciatore&gt;
++ ordinaCalciatoriNumero(): ArrayList&lt;Calciatore&gt;
++ toString: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>738</x>
+      <y>369</y>
+      <w>54</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Attore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>882</x>
+      <y>306</y>
+      <w>171</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>visualizzare i giocatori</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>882</x>
+      <y>342</y>
+      <w>171</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>aggiungere un giocatore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>882</x>
+      <y>378</y>
+      <w>171</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>cerca giocatore per nome</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>882</x>
+      <y>414</y>
+      <w>171</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>eliminare un giocatore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>882</x>
+      <y>450</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>importa file CSV</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>279</y>
+      <w>153</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>150.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>351</y>
+      <w>144</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>378</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>387</y>
+      <w>144</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>387</y>
+      <w>144</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>387</y>
+      <w>144</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>891</x>
+      <y>270</y>
+      <w>162</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>esci</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>315</y>
+      <w>144</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>882</x>
+      <y>486</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Esporta file CSV</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>387</y>
+      <w>144</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>140.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>891</x>
+      <y>576</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Deserializzazione</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>387</y>
+      <w>153</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>150.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>756</x>
+      <y>387</y>
+      <w>153</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>150.0;230.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>891</x>
+      <y>531</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Serializzazione</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
